@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(Animal.class)
 public class BreedMixin {
 	@Inject(at = @At("TAIL"), method = "spawnChildFromBreeding", locals = LocalCapture.CAPTURE_FAILHARD)
-	private void carryNamtagSpawnChildFromBreeding(ServerLevel serverLevel, Animal animal, CallbackInfo ci, AgeableMob ageableMob) {
+	private void carryNametagSpawnChildFromBreeding(ServerLevel serverLevel, Animal animal, CallbackInfo ci, AgeableMob ageableMob) {
 		CommonCarry.doRename(((Animal) (Object) this), animal, ageableMob);
 	}
 }

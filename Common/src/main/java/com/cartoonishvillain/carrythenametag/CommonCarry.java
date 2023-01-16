@@ -36,6 +36,8 @@ public class CommonCarry {
 
                 if(ageableMob.getRandom().nextInt(2) == 1) ageableMob.setCustomName(Component.literal(newname1 + newname2));
                 else ageableMob.setCustomName(Component.literal(newname2 + newname1));
+
+                ageableMob.setPersistenceRequired();
             }
         }
 

@@ -4,7 +4,6 @@
   "package": "com.cartoonishvillain.carrythenametag.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BreedMixin"
   ],
   "server": [
   ],
