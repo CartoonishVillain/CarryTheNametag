@@ -31,11 +31,18 @@ public class CommonCarry {
                 String name1 = customName1;
                 String name2 = customName2;
 
-                String newname1 = name1.substring(0, name1.length()/2);
-                String newname2 = name2.substring(name2.length()/2);
 
-                if(ageableMob.getRandom().nextInt(2) == 1) ageableMob.setCustomName(Component.literal(newname1 + newname2));
-                else ageableMob.setCustomName(Component.literal(newname2 + newname1));
+
+                if(ageableMob.getRandom().nextInt(2) == 1) {
+                    String newname1 = name1.substring(0, name1.length()/2);
+                    String newname2 = name2.substring(name2.length()/2);
+                    ageableMob.setCustomName(Component.literal(newname1 + newname2));
+                }
+                else {
+                    String newname1 = name2.substring(0, name2.length()/2);
+                    String newname2 = name1.substring(name1.length()/2);
+                    ageableMob.setCustomName(Component.literal(newname1 + newname2));
+                }
 
                 ageableMob.setPersistenceRequired();
             }
