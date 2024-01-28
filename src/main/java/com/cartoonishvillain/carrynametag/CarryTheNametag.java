@@ -46,8 +46,8 @@ public class CarryTheNametag
                     if(event.getChild().getRandom().nextInt(2) == 1) event.getChild().setCustomName(new TextComponent(newname1 + newname2));
                     else event.getChild().setCustomName(new TextComponent(newname2 + newname1));
                 }
+                event.getChild().setPersistenceRequired();
             }
-
         }
     }
 }
